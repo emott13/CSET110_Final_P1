@@ -10,6 +10,8 @@
 
 :root{
     --font-family: 'Roboto', 'Helvetica', 'Sans-serif';
+    --font-family-L: 'Lato';
+    --font-family-R: 'Roboto';
     --font-family-PD: 'Playfair Display';
     --line-height: 1.2;
 }
@@ -41,19 +43,26 @@ header{
 .flex{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 
 /* ---- hamburger menu ---- */
 
 #logo{
-    font-family: var(--font-family);
+    font-family: var(--font-family-R);
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 800;
     color: #fff;
     text-decoration: none;
     position: relative;
     top: 4px;
+    padding-bottom: 8px;
 }
+
+/* .nav-menu{
+    display: flex;
+} */
 
 .hamburger-menu{
     background-color: transparent;
@@ -91,6 +100,10 @@ header ul li a{
     text-decoration: none;
 }
 
+.active{
+    color: #fff;
+}
+
 header ul.is-sticky li a{
     color: #000;
 }
@@ -105,8 +118,8 @@ header ul.is-sticky li a.active{
     color: #f69314;
 }
 
-/* end header */
 
+/* end header */
 
 h1, h2{
     font-weight: 800;
@@ -143,6 +156,7 @@ h5{
 p{
     margin: 0 0 1rem;
 }
+
 
 /* ---- hero ---- */
 
@@ -182,7 +196,7 @@ p{
     min-height: 600px;
     height: calc(100vh);
     position: relative;
-    background-color: #343a40;
+    background-color: rgba(52, 58, 64, 0.9);
 }
 
 #hero .hero-text p{
@@ -191,6 +205,7 @@ p{
     font-size: 1rem;
     font-family: var(--font-family);
 }
+
 
 /* ---- how it works ---- */
 
@@ -213,10 +228,18 @@ p{
     margin-top: 1rem;
 }
 
-#how-it-works span.fas{
-    color: #f69314;
-    font-size: 35px;
+.fa > img{
+    height: 35px;
 }
+
+.fas > img {
+    height: 35px;
+}
+
+.fa{
+    height: fit-content;
+}
+
 
 /* ---- properties ---- */
 
@@ -306,6 +329,7 @@ p{
     width: 350px;
 }
 
+
 /* ---- agents ---- */
 
 #agents{
@@ -344,6 +368,7 @@ p{
     padding-left: 1rem;
 }
 
+
 /* ---- the best ---- */
 
 #the-best {
@@ -366,6 +391,7 @@ p{
 #the-best ul li {
     margin: 10px 0;
 }
+
 
 /* ----- services ---- */
 
