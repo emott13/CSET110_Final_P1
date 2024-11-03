@@ -20,7 +20,7 @@
     <!-- for sunday: fix slider spacing and arrows, icon colors/sizing, add testimonial sliders, add footer -->
 
     <div id="header-hero-container">
-        <header>
+        <header class="header">
             <div class="flex container">
                 <a href="#" id="logo">STATED.</a>
                 <nav>
@@ -308,7 +308,7 @@
                         <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis sint nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
                     </blockquote>
                     <div class="testimonials-caption">
-                        <img src="" alt="Client 7" />
+                        <img src="/Images/Client_1.png" alt="Client 7" />
                         <p>Nick Andros</p>
                     </div>
                 </div>
@@ -318,8 +318,8 @@
                         <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis sint nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
                     </blockquote>
                     <div class="testimonials-caption">
-                        <img src="" alt="Client 7" />
-                        <p>Larry Underwood</p>
+                        <img src="/Images/Client_2.png" alt="Client 7" />
+                        <p>Jessie Underwood</p>
                     </div>
                 </div>
 
@@ -328,8 +328,8 @@
                         <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis sint nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
                     </blockquote>
                     <div class="testimonials-caption">
-                        <img src="" alt="Client 7" />
-                        <p>Fran Goldsmith</p>
+                        <img src="/Images/Client_3.png" alt="Client 7" />
+                        <p>Girish Bakshi</p>
                     </div>
                 </div>
             </div>
@@ -338,7 +338,7 @@
 
     <script>
         $(function () {
-            let headerElement = $('header');
+            let headerElement = $('.header');
             let logo = $('#logo')
             let navMenu = $('#nav-menu')
             let navToggle = $('#nav-toggle')
@@ -377,24 +377,14 @@
                 ]
             });
 
-            $('.slick-prev').click(function(){
-                $('#properties-slider').slick('slickPrev')
-            });
-
-            $('.slick-next').click(function(){
-                $('#properties-slider').slick('slickNext')
-            })
-
             $('#testimonials-slider').slick({
                 inifite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true,
-                prevArrow: '<a href="#" class="slick-arrow slick-prev">previous</a>',
-                nextArrow: '<a href="#" class="slick-arrow slick-next">next</a>'
+                prevArrow: '<a href="#" class="slick-arrow slick-prev"><span class="fas fa-chevron-left"></span></a>',
+                nextArrow: '<a href="#" class="slick-arrow slick-next"><span class="fas fa-chevron-right"></span></a>'
             });
-
-
 
             navToggle.on('click', ()=>{
                 navMenu.css('right', '0');
@@ -431,7 +421,7 @@
                     navToggle.find('strip').css('background-color', '#fff')
                 }
 
-                headerElement.css(scrollTop >= 200 ? {'padding': '0.5rem', 'boxshadow': '0 -4px 10px 1px #999'} : {'padding': '1rem 0', 'box-shadow': 'none'});
+                headerElement.css(scrollTop >= 200 ? {'padding': '0.5rem', 'box-shadow': '0 -4px 10px 1px #999999'} : {'padding': '1rem 0', 'box-shadow': 'none'});
 
             })
             $(document).trigger('scroll');
