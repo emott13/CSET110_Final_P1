@@ -228,8 +228,14 @@ p{
     margin-top: 1rem;
 }
 
-.fa > img{
+#how-it-works span.fas,
+#how-it-works span.fa{
+    color: #f69314;
+    font-size: 35px;
+}
+/* .fa > img{
     height: 35px;
+    color: #f69314;
 }
 
 .fas > img {
@@ -238,7 +244,7 @@ p{
 
 .fa{
     height: fit-content;
-}
+} */
 
 
 /* ---- properties ---- */
