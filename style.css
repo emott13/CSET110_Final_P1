@@ -36,12 +36,6 @@ header{
     z-index: 3;
 }
 
-.Logo-module_root{
-    margin: 0;
-    height: var(--header-height);
-    flex: 0 0 auto;
-}
-
 .main-header > .header-wrap{
     border-bottom: 1px solid var(--color-16);
 }
@@ -58,7 +52,6 @@ header{
     position: relative;
     z-index: 11;
 }
-
 
 /* ---- codepen logo ---- */
 
@@ -166,31 +159,20 @@ header{
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
-    /* padding: 10px 16px; */
     margin-right: 5px;
     color: var(--color-1);
     background-color: var(--color-13);
     border: none;
 }
 
+.Button-module_root i{
+    display: none;
+}
+
 .Button-module_root-SignUp-Follow:hover{
     color: #fff;
     background-color: var(--color-green-dark);
 }
-
-/* .Button-module_root-SignUp-Follow > svg{
-    width: 10px;
-    height: 10px;
-    min-height: 1.2em;
-    margin-right: 5px;
-    display: inline-block;
-    pointer-events: none;
-    fill: currentColor;
-}
-
-.Button-module_root-SignUp-Follow > svg:first-child{
-    margin-right: .35em;
-} */
 
 .followButton{
     font-size: .7rem;
@@ -218,7 +200,6 @@ header{
     flex: 1 1 auto;
     position: relative;
     height: calc(100vh - 5px);
-    /* margin-top: 8px; */
     overflow: auto;
 }
 
@@ -251,3 +232,70 @@ header{
     width: fit-content;
     z-index: 1;
 } */
+
+
+/* ----------------------- */
+/* ---- MEDIA QUERIES ---- */
+/* ----------------------- */
+
+
+@media(max-width: 767px){
+
+    .HeaderWrap-module_root{
+        font-size: .5rem;
+        height: 53px;
+    }
+
+    .btn{
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        padding: 9px 12px;
+    }
+
+    .Title_ownerLink{
+        font-size: .7rem;
+    }
+
+    .Title_Title{
+        font-size: 1rem;
+    }
+
+    .heart-button{
+        display: none;
+    }
+
+    .Button-module_root span{
+        display: none;
+    }
+
+    .Button-module_root i{
+        display: contents;
+        color: #fff;
+        height: 15px;
+    }
+
+    #added-html{
+        position: absolute;
+        top: -1%;
+    }
+}
+
+@media(max-width: 420px){
+
+    .btn{
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.6rem;
+        padding: 9px 8px;
+    }
+
+    .Title_ownerLink{
+        font-size: .6rem;
+    }
+
+    .Title_Title{
+        font-size: .9rem;
+    }
+
+}
