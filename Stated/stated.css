@@ -40,7 +40,6 @@ body{
 .flex{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 h1, h2{
@@ -93,6 +92,10 @@ header{
     position: fixed;
     width: 100%;
     z-index: 3;
+}
+
+header .flex{
+    align-items: center;
 }
 
 #logo{
@@ -526,4 +529,69 @@ button.rounded{
     position: relative;
     top: 13px;
     font-size: 1.2rem;
+}
+
+
+/* ----------------- */
+/* ---- Contact ---- */
+/* ----------------- */
+
+
+#contact{
+    background-color: #f8f9fa;
+    padding: 4rem 0 8rem; 
+}
+
+#form-container{
+    width: 58%;
+    background-color: #fff;
+    padding: 3rem;
+    height: 0%;
+}
+
+#form-container label{
+    display: block;
+    color: #000;
+    margin-top: 1rem;
+}
+
+#form-container input,
+#form-container textarea{
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    height: 43px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: #495057;
+}
+
+#form-container textarea{
+    height: 170px;
+    margin-bottom: 2rem;
+    resize: none;
+}
+
+#address-container{
+    width: 38%;
+    background-color: #fff;
+    padding: 1.5rem;
+    height: 0%;
+}
+
+#address-container label:first-child{
+    margin-top: 0;
+}
+
+#address-container label{
+    font-weight: 700;
+    display: block;
+    margin-top: 2rem;
+}
+
+#address-container a{
+    text-decoration: none;
+    color: #f69314;
 }
